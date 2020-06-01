@@ -50,7 +50,7 @@ namespace VeterinariaGUI
            cliente.Apellido= ApellidoClienteTxt.Text;
             cliente.Telefono= TelefonoTxt.Text;
             cliente.FechaRegistro= dateFecha.Value;
-            cliente.Correo= CorreoTxt.Text;
+            cliente.Email= CorreoTxt.Text;
             cliente.Direccion = DireccionTxt.Text;
             
             return cliente;
@@ -88,7 +88,7 @@ namespace VeterinariaGUI
                    ApellidoClienteTxt.Text= respuesta.cliente.Apellido.ToString();
                    TelefonoTxt.Text= respuesta.cliente.Telefono.ToString();
                    dateFecha.Value= respuesta.cliente.FechaRegistro;
-                   CorreoTxt.Text= respuesta.cliente.Correo.ToString();
+                   CorreoTxt.Text= respuesta.cliente.Email.ToString();
                    DireccionTxt.Text = respuesta.cliente.Direccion.ToString();
                 }
                 else

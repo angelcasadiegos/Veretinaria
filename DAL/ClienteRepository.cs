@@ -21,14 +21,14 @@ namespace DAL
             {
                 using (var command = _connection.CreateCommand())
                 {
-                    command.CommandText = @"Insert Into clientes (Identificacion,Nombre,Apellido,Telefono,FechaRegistro,Correo,Direccion) 
-                                        values (@Identificacion,@Nombre,@Apellido,@Telefono,@FechaRegistro,@Correo,@Direccion)";
+                    command.CommandText = @"Insert Into clientes (Identificacion,Nombre,Apellido,Telefono,FechaRegistro,Email,Direccion) 
+                                        values (@Identificacion,@Nombre,@Apellido,@Telefono,@FechaRegistro,@Email,@Direccion)";
                     command.Parameters.AddWithValue("@Identificacion", Cliente.Identificacion);
                     command.Parameters.AddWithValue("@Nombre", Cliente.Nombre);
                     command.Parameters.AddWithValue("@Apellido", Cliente.Apellido);
                     command.Parameters.AddWithValue("@Telefono", Cliente.Telefono);
                     command.Parameters.AddWithValue("@FechaRegistro", Cliente.FechaRegistro);
-                    command.Parameters.AddWithValue("@Correo", Cliente.Correo);
+                    command.Parameters.AddWithValue("@Email", Cliente.Email);
                      command.Parameters.AddWithValue("@Direccion", Cliente.Direccion);
                     var filas = command.ExecuteNonQuery();
                 }
@@ -74,7 +74,7 @@ namespace DAL
             Cliente.Apellido = (string)dataReader["Apellido"];
             Cliente.Telefono = (string)dataReader["Telefono"];
             Cliente.FechaRegistro = (DateTime)dataReader["FechaRegistro"];
-            Cliente.Correo= (string)dataReader["Correo"];
+            Cliente.Email= (string)dataReader["Email"];
             Cliente.Direccion = (string)dataReader["Direccion"];
             return Cliente;
         }
@@ -98,13 +98,13 @@ namespace DAL
         { 
             using (var command = _connection.CreateCommand())
             {
-                command.CommandText = "update clientes set  nombre=@Nombre, apellido=@Apellido, telefono=@Telefono,fechaRegistro=@Fecharegistro,correo=@Correo,direccion=@Direccion where Identificacion=@Identificacion";
+                command.CommandText = "update clientes set  nombre=@Nombre, apellido=@Apellido, telefono=@Telefono,fechaRegistro=@Fecharegistro,email=@Email,direccion=@Direccion where Identificacion=@Identificacion";
                 command.Parameters.AddWithValue("@Identificacion", Cliente.Identificacion);
                 command.Parameters.AddWithValue("@Nombre", Cliente.Nombre);
                 command.Parameters.AddWithValue("@Apellido", Cliente.Apellido);
                 command.Parameters.AddWithValue("@Telefono", Cliente.Telefono);
                 command.Parameters.AddWithValue("@FechaRegistro", Cliente.FechaRegistro);
-                command.Parameters.AddWithValue("@Correo", Cliente.Correo);
+                command.Parameters.AddWithValue("@Email", Cliente.Email);
                 command.ExecuteNonQuery();
             }
         }

@@ -29,7 +29,7 @@ namespace DAL
                 command.Parameters.AddWithValue("@Cargo", empleado.Cargo);
                 command.Parameters.AddWithValue("@Telefono", empleado.Telefono);
                 command.Parameters.AddWithValue("@FechaIngreso", empleado.FechaIngreso);
-                command.Parameters.AddWithValue("@Correo", empleado.Correo);
+                command.Parameters.AddWithValue("@Correo", empleado.Email);
                 command.Parameters.AddWithValue("@Direccion", empleado.Direccion);
            
                 var filas = command.ExecuteNonQuery();
@@ -77,7 +77,7 @@ namespace DAL
             empleado.Cargo= (string)dataReader["Cargo"];
             empleado.Telefono = (string)dataReader["Telefono"];
             empleado.FechaIngreso = (DateTime)dataReader["FechaIngreso"];
-            empleado.Correo = (string)dataReader["Correo"];
+            empleado.Email = (string)dataReader["Correo"];
             empleado.Direccion = (string)dataReader["Direccion"];
             return empleado;
         }
@@ -108,7 +108,7 @@ namespace DAL
                 command.Parameters.AddWithValue("@Cargo", empleado.Cargo);
                 command.Parameters.AddWithValue("@Telefono", empleado.Telefono);
                 command.Parameters.AddWithValue("@FechaIngreso", empleado.FechaIngreso);
-                command.Parameters.AddWithValue("@Correo", empleado.Correo);
+                command.Parameters.AddWithValue("@Correo", empleado.Email);
                 command.Parameters.AddWithValue("@Direccion", empleado.Direccion);
 
                 var filas = command.ExecuteNonQuery();

@@ -12,17 +12,16 @@ namespace Entity
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Telefono { get; set; }
-        public string Correo { get; set; }
-
+        public string Email { get; set; }
         public string Direccion { get; set; }
 
-        public Persona( string identificacion,string nombre, string apellido, string telefono, string correo, string direccion)
+        public Persona( string identificacion,string nombre, string apellido, string telefono, string email, string direccion)
         {
         
             Nombre = nombre;
             Apellido = apellido;
             Telefono = telefono;
-            Correo = correo;
+            Email = email;
             Direccion = direccion;
         }
 

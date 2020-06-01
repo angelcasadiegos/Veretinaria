@@ -11,8 +11,8 @@ namespace Entity
         public string Cargo { get; set; }
         public DateTime FechaIngreso {get;set;}
 
-        public Empleado(string identificacion, string cargo , DateTime fechaIngreso, string cedula, string nombre, string apellidos, string telefono, string correo)
-            : base(identificacion,cedula, nombre, apellidos, telefono, correo )
+        public Empleado(string identificacion, string cargo , DateTime fechaIngreso, string cedula, string nombre, string apellidos, string telefono, string email)
+            : base(identificacion,cedula, nombre, apellidos, telefono, email )
         {
        
         }

@@ -71,7 +71,7 @@ namespace VeterinariaGUI
            empleado.Cargo =TipoCmb.Text;
            empleado.Telefono = TelefonoTxt.Text;
            empleado.FechaIngreso = date.Value;
-           empleado.Correo = CorreoTxt.Text;
+           empleado.Email = CorreoTxt.Text;
            empleado.Direccion = DireccionTxt.Text;
 
             return empleado;
@@ -117,7 +117,7 @@ namespace VeterinariaGUI
                     TipoCmb.Text = respuesta.empleado.Cargo;
                     TelefonoTxt.Text = respuesta.empleado.Telefono;
                     date.Value = respuesta.empleado.FechaIngreso;
-                    CorreoTxt.Text = respuesta.empleado.Correo;
+                    CorreoTxt.Text = respuesta.empleado.Email;
                     DireccionTxt.Text = respuesta.empleado.Direccion;
                 }
                 else

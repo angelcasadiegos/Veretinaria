@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL;
 using Entity;
+using Infraestructura;
 
 namespace BLL
 {
@@ -20,10 +21,13 @@ namespace BLL
         }
         public string Guardar(Cliente cliente)
         {
+            Email email = new Email();
+            string mensajeEmail = string.Empty;
             try
             {
                 conexion.Open();
                 clienterepositorio.Guardar(cliente);
+                mensajeEmail = email.EnviarEmail(cliente);
                 conexion.Close();
                 return $"Se guardaron los datos del cliente satisfactoriamente";
             }

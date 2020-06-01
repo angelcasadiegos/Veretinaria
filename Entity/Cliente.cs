@@ -11,8 +11,8 @@ namespace Entity
       public DateTime FechaRegistro {get;set;}
       public List<Mascota> mascotas {get;set;}
 
-        public Cliente(DateTime fechaRegistro, string identificacion, string nombre, string apellidos, string telefono, string correo, string direccion)
-            :base( identificacion,nombre, apellidos, telefono, correo,direccion)
+        public Cliente(DateTime fechaRegistro, string identificacion, string nombre, string apellidos, string telefono, string email, string direccion)
+            :base( identificacion,nombre, apellidos, telefono, email ,direccion)
         {
             FechaRegistro = fechaRegistro;
            
