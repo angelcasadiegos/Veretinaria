@@ -39,6 +39,7 @@
             this.TipoConsultaCmb = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.GenerarInformeBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinimizarBtn)).BeginInit();
@@ -102,6 +103,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel2.Controls.Add(this.GenerarInformeBtn);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.TipoConsultaCmb);
             this.panel2.Controls.Add(this.label2);
@@ -117,7 +119,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(609, 73);
+            this.button1.Location = new System.Drawing.Point(568, 73);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 57);
             this.button1.TabIndex = 2;
@@ -162,6 +164,16 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // GenerarInformeBtn
+            // 
+            this.GenerarInformeBtn.Location = new System.Drawing.Point(658, 94);
+            this.GenerarInformeBtn.Name = "GenerarInformeBtn";
+            this.GenerarInformeBtn.Size = new System.Drawing.Size(107, 23);
+            this.GenerarInformeBtn.TabIndex = 4;
+            this.GenerarInformeBtn.Text = "Generar Informe";
+            this.GenerarInformeBtn.UseVisualStyleBackColor = true;
+            this.GenerarInformeBtn.Click += new System.EventHandler(this.GenerarInformeBtn_Click);
+            // 
             // MenuClientesFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,5 +208,6 @@
         private System.Windows.Forms.ComboBox TipoConsultaCmb;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button GenerarInformeBtn;
     }
 }

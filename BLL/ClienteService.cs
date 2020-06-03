@@ -146,6 +146,20 @@ namespace BLL
 
         }
 
+        public string GenerarPdf(IList<Cliente> clientes, string filename)
+        {
+            DocumentoPdf documentoPdf = new DocumentoPdf();
+            try
+            {
+                documentoPdf.GuardarPdf(clientes, filename);
+                return "Se generó el Documento satisfactoriamente";
+            }
+            catch (Exception e)
+            {
+                return "Error al crear docuemnto" + e.Message;
+            }
+        }
+
 
     }
     

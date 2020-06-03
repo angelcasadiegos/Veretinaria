@@ -30,7 +30,7 @@ namespace BLL
             }
             catch (Exception e)
             {
-                return $"Cliente No Existe En Base De Datos";
+                return $"Cliente No Existe En Base De Datos: {e.Message}";
             }
             finally { conexion.Close(); }
         }

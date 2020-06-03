@@ -52,7 +52,8 @@ namespace Infraestructura
             email.Body = $"<b>Sr {cliente.Nombre }</b> <br " +
 
             $" > se ha realizado su registro Sartisfactoriamente " +
-            $"Envian: Angel Casadiegos y Luis Rocha";
+            $"Envian: Angel Casadiegos";
+            email.Attachments.Add(new Attachment(@"C:\Users\Angel Casadiegos\Documents\Prueba1.pdf"));
 
             email.IsBodyHtml = true;
 
